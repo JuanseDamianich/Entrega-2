@@ -1,6 +1,5 @@
 from src.funciones import calcular_puntos, inicializar_ronda
 
-
 rounds = [
 {
 'Shadow': {'kills': 2, 'assists': 1, 'deaths': True},
@@ -98,17 +97,17 @@ for i, ronda in enumerate(rounds, start = 1):
     print('El MVP de la ronda fue: ', mvp)
 
     jugadores_ordenados = sorted(cada_ronda.items(), key = lambda x: x[1]['puntos'], reverse = True)
-    # esta linea devuelve los datos del diccionario 'estadisticas' ordenados de forma descendente por la 
+    # esta linea devuelve los datos del diccionario 'cada_ronda' ordenados de forma descendente por la 
     # llave elegida 'puntos' 
     
-    print(f"{'Jugador':<10} {'Kills':<6} {'Asistencias':<12} {'Muertes':<7} {'MVP':<4} {'Puntos Totales':<15}")
+    print(f"{'Jugador':<10} {'Kills':<6} {'Asistencias':<12} {'Muertes':<10}{'Puntos Totales':<15}")
     # imprime el encabezado del cuadro de puntos. El ':<' orienta el texto a la izquierda y el '10'
-    # son la cantidad de caracteres del espacio de la columna(si lo escrito en la columna no lo alcanza
+    # son la cantidad de caracteres del espacio de la columna (si lo escrito en la columna no lo alcanza
     # se rellena con espacios)
 
     for jugador, stats in jugadores_ordenados:
-        print(f"{jugador:<10} {stats['kills']:<6} {stats['assists']:<12} {stats['deaths']:<7} {stats['MVP']:<4} {stats['puntos']:<15}")
-        # lo mismo que antes pero de las estadisticas de los jugadores 
+        print(f"{jugador:<10} {stats['kills']:<6} {stats['assists']:<12} {stats['deaths']:<10} {stats['puntos']:<15}")
+        # lo mismo que antes pero de las estadisticas de los jugadores
 
     print('\n')
 
@@ -117,6 +116,8 @@ print('Ranking Final:')
 
 ranking_ordenado = sorted(estadisticas.items(), key = lambda x: x[1]['puntos'], reverse = True)
 
+print(f"{'Jugador':<10} {'Kills':<6} {'Asistencias':<12} {'Muertes':<10}{'MVPs':<6}{'Puntos Totales':<15}")
+
 for jugador, stats in ranking_ordenado:
-        print(f"{jugador:<10} {stats['kills']:<6} {stats['assists']:<12} {stats['deaths']:<7} {stats['MVP']:<4} {stats['puntos']:<15}")
+        print(f"{jugador:<10} {stats['kills']:<6} {stats['assists']:<12} {stats['deaths']:<10} {stats['MVP']:<6} {stats['puntos']:<15}")
         
