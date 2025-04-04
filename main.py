@@ -47,11 +47,11 @@ estadisticas = {
 }
 
 cada_ronda = {
-'Shadow': {'kills': 0, 'assists': 0, 'deaths': 0, 'MVP': 0, 'puntos': 0},
-'Blaze': {'kills': 0, 'assists': 0, 'deaths': 0, 'MVP': 0, 'puntos': 0},
-'Viper': {'kills': 0, 'assists': 0, 'deaths': 0, 'MVP': 0, 'puntos': 0},
-'Frost': {'kills': 0, 'assists': 0, 'deaths': 0, 'MVP': 0, 'puntos': 0},
-'Reaper': {'kills': 0, 'assists': 0, 'deaths': 0, 'MVP': 0, 'puntos': 0}
+'Shadow': {'kills': 0, 'assists': 0, 'deaths': 0, 'puntos': 0},
+'Blaze': {'kills': 0, 'assists': 0, 'deaths': 0, 'puntos': 0},
+'Viper': {'kills': 0, 'assists': 0, 'deaths': 0, 'puntos': 0},
+'Frost': {'kills': 0, 'assists': 0, 'deaths': 0, 'puntos': 0},
+'Reaper': {'kills': 0, 'assists': 0, 'deaths': 0, 'puntos': 0}
 }
 
 
@@ -120,4 +120,3 @@ print(f"{'Jugador':<10} {'Kills':<6} {'Asistencias':<12} {'Muertes':<10}{'MVPs':
 
 for jugador, stats in ranking_ordenado:
         print(f"{jugador:<10} {stats['kills']:<6} {stats['assists']:<12} {stats['deaths']:<10} {stats['MVP']:<6} {stats['puntos']:<15}")
-        
