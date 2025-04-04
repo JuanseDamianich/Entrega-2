@@ -119,3 +119,4 @@ ranking_ordenado = sorted(estadisticas.items(), key = lambda x: x[1]['puntos'], 
 
 for jugador, stats in ranking_ordenado:
         print(f"{jugador:<10} {stats['kills']:<6} {stats['assists']:<12} {stats['deaths']:<7} {stats['MVP']:<4} {stats['puntos']:<15}")
+        
