@@ -1,4 +1,4 @@
-
+from src.funciones import calcular_puntos, inicializar_ronda
 
 
 rounds = [
@@ -57,26 +57,6 @@ cada_ronda = {
 
 
 
-def Calcular_Puntos(kills, asistencias, muertes):
-    if muertes == True:
-        muertes = 1
-    else:
-        muertes = 0
-    
-    puntos = kills * 3 + asistencias * 1 - muertes * 1
-
-    return puntos 
-
-def inicializar_ronda(cada_ronda):
-    for jugador in cada_ronda:
-        cada_ronda[jugador]['kills'] = 0
-        cada_ronda[jugador]['assists'] = 0    
-        cada_ronda[jugador]['deaths'] = 0
-        cada_ronda[jugador]['puntos'] = 0
-
-
-
-
 
 # Recorrer las rondas
 for i, ronda in enumerate(rounds, start = 1):
@@ -93,7 +73,7 @@ for i, ronda in enumerate(rounds, start = 1):
         kills = stats['kills']
         asistencias = stats['assists']
         muertes = stats['deaths']
-        puntos = Calcular_Puntos(kills, asistencias, muertes)
+        puntos = calcular_puntos(kills, asistencias, muertes)
 
         # determinar el MVP
         if puntos > max: 
